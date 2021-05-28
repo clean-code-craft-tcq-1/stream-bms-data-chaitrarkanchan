@@ -5,8 +5,8 @@ public class BMSSender {
 	public static void main(String[] args) {
 		while(true) {
 		System.out.println("Please enter number of BMS readings to be generate (Min->10):");
-		String inputGenarateRange = "";
-		inputGenarateRange=System.console().readLine();
+		try {
+		String inputGenarateRange = System.console().readLine();
 		if(inputGenarateRange.contentEquals("x"))
 		{
 			break;
@@ -20,6 +20,13 @@ public class BMSSender {
 			bms_s.printBatteryReadingsToConsole();
 		}
 		System.out.println("\n\n Enter 'x' to exit...! ");
+		
 		}
+		catch(NullPointerException  e)
+		{
+			System.out.println(e.getMessage());
+		}
+		}
+		
 	}
 }
