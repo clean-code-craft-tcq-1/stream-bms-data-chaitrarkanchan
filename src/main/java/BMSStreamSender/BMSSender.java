@@ -5,7 +5,8 @@ public class BMSSender {
 	public static void main(String[] args) {
 		while(true) {
 		System.out.println("Please enter number of BMS readings to be generate (Min->10):");
-		String inputGenarateRange = System.console().readLine();
+		String inputGenarateRange = "";
+		inputGenarateRange=System.console().readLine();
 		if(inputGenarateRange.contentEquals("x"))
 		{
 			break;
