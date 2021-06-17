@@ -3,7 +3,7 @@ import subprocess
 
 
 
-output = subprocess.call(['java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java',stderr=subprocess.PIPE])
+output = subprocess.call(['java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java'])
 numlist = output(10)
 window_size = 3
 num_series = pd.Series(numlist)
