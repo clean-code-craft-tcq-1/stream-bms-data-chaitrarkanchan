@@ -4,7 +4,8 @@ import subprocess
 
 
 output = subprocess.Popen(['java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java'],stdout=subprocess.PIPE)
-num = output.communicate()
+num = output.stdout.read()
+print num
 numlist = [num]
 window_size = 3
 num_series = pd.Series(numlist)
