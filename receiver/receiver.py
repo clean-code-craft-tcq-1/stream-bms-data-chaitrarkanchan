@@ -4,7 +4,7 @@ import subprocess
 
 
 output = subprocess.call(['java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java'])
-numlist = output(10)
+numlist = int(output(10))
 window_size = 3
 num_series = pd.Series(numlist)
 windows = num_series.rolling(window_size)
