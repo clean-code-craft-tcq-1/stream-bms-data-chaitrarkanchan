@@ -1,7 +1,8 @@
 import pandas as pd
 import bms_sender_data
 
-numlist = bms_sender_data.streaming_bms_readings(5)
+output = subprocess.check_output("java BMSServiceImpl", stderr=subprocess.PIPE)
+numlist = BMSServiceImpl.paramValReading(5)
 window_size = 3
 num_series = pd.Series(numlist)
 windows = num_series.rolling(window_size)
