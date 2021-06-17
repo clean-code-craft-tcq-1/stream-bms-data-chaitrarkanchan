@@ -1,5 +1,6 @@
 import pandas as pd
-import bms_sender_data
+import subprocess
+
 
 output = subprocess.check_output("java BMSServiceImpl", stderr=subprocess.PIPE)
 numlist = BMSServiceImpl.paramValReading(10)
