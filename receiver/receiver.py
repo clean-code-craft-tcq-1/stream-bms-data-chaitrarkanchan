@@ -4,7 +4,7 @@ import BMSServiceImpl
 import IBMSService 
 
 
-output = subprocess.check_output("java BMSServiceImpl", stderr=subprocess.PIPE)
+output = subprocess.call('java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java',stderr=subprocess.PIPE)
 numlist = BMSServiceImpl.paramValReading(10)
 window_size = 3
 num_series = pd.Series(numlist)
