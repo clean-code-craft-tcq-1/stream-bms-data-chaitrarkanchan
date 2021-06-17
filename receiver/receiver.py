@@ -3,9 +3,9 @@ import subprocess
 
 
 
-output = subprocess.call(['java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java'])
-print(output)
-numlist = []
+output = subprocess.Popen(['java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java'],stdout=subprocess.PIPE)
+out, err = p.communicate()
+numlist = [out]
 window_size = 3
 num_series = pd.Series(numlist)
 windows = num_series.rolling(window_size)
