@@ -1,7 +1,6 @@
 import pandas as pd
 import subprocess
-import BMSServiceImpl
-import IBMSService 
+
 
 
 output = subprocess.call('java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java',stderr=subprocess.PIPE)
