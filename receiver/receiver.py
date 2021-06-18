@@ -13,16 +13,20 @@ moving_averages = moving_averages.tolist()
 moving_averages_without_nans = moving_averages[window_size - 1:]
 
 def max_temp(numlist):
-    return max(numlist)
+    maximumtemp = max(numlist)
+    print(maximumtemp) 
       
 def min_temp(numlist):
-    return min(numlist) 
+    minimumtemp = min(numlist) 
+    print(minimumtemp)
 
 def max_soc(numlist):
-    return max(numlist)  
+    maximumsoc = max(numlist)
+    print(maximumsoc)
 
 def min_soc(numlist):
-    return min(numlist)
+    minimumsoc = min(numlist)
+    print(minimumsoc)
 
 print(moving_averages_without_nans)
 print("MaxTemp - ",max_temp(numlist),"  MinTemp - ",min_temp(numlist))
