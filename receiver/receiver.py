@@ -12,3 +12,4 @@ moving_averages = windows.mean()
 moving_averages = moving_averages.tolist()
 moving_averages_without_nans = moving_averages[window_size - 1:]
 print(moving_averages_without_nans)
+print ("Max number:",max(numlist), "\nMin number:",min(numlist))
