@@ -2,7 +2,8 @@ import pandas as pd
 import subprocess
 
 output = subprocess.Popen(['java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java'],stdout=subprocess.PIPE)
-numlist = output.stdout.read()
+num = output.stdout.read()
+numlist = pd.to_numeric(num)
 window_size = 3
 num_series = pd.Series(numlist)
 windows = num_series.rolling(window_size)
