@@ -15,14 +15,13 @@ def bms_max(bms_param):
    return max(bms_param)
   
 def bms_movingaverage(bms_param):
-    length = len(bms_param)
-    if length >= 5:
-        bmsmovingaverage = (sum(bms_param[-5:])/5)
-        return bmsmovingaverage
-    return "Invalid Count"
+   length = len(bms_param)
+   if length >= 5:
+      bmsmovingaverage = (sum(bms_param[-5:])/5)
+      return bmsmovingaverage
+   return "Invalid Count"
   
- def print_to_console():
-  
+def print_to_console(): 
     print('MaximumTemperature', bms_max(temperature_range))
     print('MinimumTemperature', bms_min(temperature_range))
     print('MovingAvg', bms_movingaverage(temperature_range))
