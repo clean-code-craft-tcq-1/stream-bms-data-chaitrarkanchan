@@ -11,7 +11,6 @@ def bms_console_input():
         if 'temperature' in line:
             input_data = line
     df = pd.DataFrame(input_data)
-def moving_average(x, w):    
     for i in range(0,df.shape[0]-2):
       df['pandas_SMA_3'] = df.iloc[:,1].rolling(window=3).mean()
       df.to_numpy().max()
