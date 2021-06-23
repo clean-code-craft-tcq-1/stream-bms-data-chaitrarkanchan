@@ -1,9 +1,10 @@
 
-import json
+import subprocess
 import pandas as pd
 
 def bms_console_input():
-    inputdata = input()   
+    output = subprocess.Popen(['java','-cp', 'src/main/java/BMSStreamSender/BMSSender.java'],stdout=subprocess.PIPE)
+    inputdata = output.stdout.read()  
     df = pd.DataFrame(inputdata)
     temperature = df['temperature'].values
     soc = df['soc'].values
