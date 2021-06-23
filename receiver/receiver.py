@@ -4,7 +4,7 @@ import subprocess
 
 
 def moving_average(x, w):
-  output = subprocess.Popen(['java','-cp', 'src/main/java/BMSStreamSender/BMSServiceImpl.java'],stdout=subprocess.PIPE)
+  output = subprocess.Popen(['java','-cp', 'src/main/java/BMSStreamSender/BMSSender.java'],stdout=subprocess.PIPE)
   num = output.stdout.read()
   df = pd.DataFrame(num)
   for i in range(0,df.shape[0]-2):
