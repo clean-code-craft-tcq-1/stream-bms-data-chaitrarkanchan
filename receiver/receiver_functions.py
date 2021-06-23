@@ -20,16 +20,3 @@ def bms_movingaverage(bms_param):
       bmsmovingaverage = (sum(bms_param[-5:])/5)
       return bmsmovingaverage
    return "Invalid Count"
-  
-def print_to_console(): 
-    print('MaximumTemperature', bms_max(temperature_range))
-    print('MinimumTemperature', bms_min(temperature_range))
-    print('MovingAvg', bms_movingaverage(temperature_range))
-    print('MaximumSOC', bms_max(state_of_charge))
-    print('MinimumSOC', bms_min(state_of_charge))
-    print('MovingAvgSOC', bms_movingaverage(state_of_charge))
-    print('MaximumChargeRate', bms_max(charge_rate))
-    print('MinimumChargeRate', bms_min(charge_rate))
-    print('MovingAvgChargeRate', bms_movingaverage(charge_rate))
-    
-    
