@@ -24,4 +24,4 @@ jobs:
         # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
     - name: Run java input 
-      run: python receiver/sender_data_test.py
+      run: python receiver/receiver_test.py
