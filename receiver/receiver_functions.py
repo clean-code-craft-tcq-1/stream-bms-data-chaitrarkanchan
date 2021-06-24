@@ -1,13 +1,3 @@
-temperature_range = []
-charge_rate = []
-state_of_charge = []
-
-def get_inputs(temp, cor, soc):
-   temperature_range.append(temp)
-   charge_rate.append(cor)
-   state_of_charge.append(soc)
-   return temperature_range, charge_rate, state_of_charge
-
 def bms_min(bms_param):
    return min(bms_param)
    
