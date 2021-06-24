@@ -26,7 +26,7 @@ def bms_movingaverage_soc(temperature_range,state_of_charge):
       return bmsmovingaveragesoc,bmsmovingaveragetemp
    return "Invalid Count"
 
-def displayoutput(temperature_range,state_of_charge)
+def displayoutput(temperature_range,state_of_charge):
     print("temperature",temperature_range)
     print("soc",state_of_charge)    
     print("MaximumTemp: ",bms_max_temp(temperature_range),"  MinimumTemp: ",bms_min_temp(temperature_range))
