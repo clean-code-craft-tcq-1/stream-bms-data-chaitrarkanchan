@@ -24,4 +24,4 @@ jobs:
         # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
     - name: Run  Receiver
-      run: mvn compile exec:java -Dexec.mainClass="sender.BMSSender.java" | python receiver/sender_test.py
+      run:  python receiver/sender_test.py
