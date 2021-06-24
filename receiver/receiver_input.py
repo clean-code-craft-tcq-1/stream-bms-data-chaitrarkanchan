@@ -1,8 +1,14 @@
 
-import subprocess
-import pandas as pd
+import sys
+import ast
+from bms_limits import battery_allowedValues 
 
 def bms_console_input():
-    output = subprocess.Popen(['java','-cp', 'src/main/java/BMSStreamSender/BMSSender.java'],stdout=subprocess.PIPE)
-    inputdata = output.stdout.read()
-    df = pd.DataFrame(inputdata)
+  data = sys.stdin.readlines()    
+     for i in data:
+         bms_param_data = ast.literal_eval(data)
+         Temperature = bms_param_data['Temperature']
+         Soc = bms_param_data['Soc']
+         return Temperature, Soc
+        
+    
