@@ -23,9 +23,5 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
-    - name: Run java
-      run:  mvn compile exec:java -Dexec.mainClass="sender.BatteryManagementSystemTest.java"
-    - name: Receiver input
-      run:  python receiver/receiver_input.py
     - name: Run java input 
-      run:  mvn compile exec:java -Dexec.mainClass="sender.BMSSender.java" 
+      run: python receiver/sender_data_test.py
