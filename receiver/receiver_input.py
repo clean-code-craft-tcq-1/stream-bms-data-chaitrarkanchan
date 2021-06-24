@@ -1,7 +1,6 @@
 
 import sys
 import ast
-from bms_limits import battery_allowedValues 
 
 def bms_console_input():
   data = sys.stdin.readlines()    
