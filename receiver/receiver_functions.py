@@ -6,15 +6,28 @@ def get_inputs(temp,soc):
    state_of_charge.append(soc)
    return temperature_range,state_of_charge
 
-def bms_min(bms_param):
-   return min(bms_param)
+def bms_min_temp(temperature_range):
+   return min(temperature_range)
    
-def bms_max(bms_param):
-   return max(bms_param)
+def bms_max_temp(temperature_range):
+   return max(temperature_range)
+
+def bms_min_soc(state_of_charge):
+   return min(state_of_charge)
+   
+def bms_max_soc(state_of_charge):
+   return max(state_of_charge)
   
-def bms_movingaverage(bms_param):
-   length = len(bms_param)
+def bms_movingaverage_soc(temperature_range,state_of_charge):
+   length = len(state_of_charge)
    if length >= 5:
-      bmsmovingaverage = (sum(bms_param[-5:])/5)
-      return bmsmovingaverage
+      bmsmovingaveragesoc = (sum(state_of_charge[-5:])/5)
+      bmsmovingaveragetemp = (sum(temperature_range[-5:])/5)
+      return bmsmovingaveragesoc,bmsmovingaveragetemp
    return "Invalid Count"
+
+def displayoutput(temperature_range,state_of_charge)
+    print("temperature",temperature_range)
+    print("soc",state_of_charge)    
+    print("MaximumTemp: ",bms_max_temp(temperature_range),"  MinimumTemp: ",bms_min_temp(temperature_range))
+    print("MaximumSoc:  ",bms_max_soc(state_of_charge),"  MinimumSOC:  ",bms_min_soc(state_of_charge))
