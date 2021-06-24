@@ -18,7 +18,7 @@ def bms_min_soc(state_of_charge):
 def bms_max_soc(state_of_charge):
    return max(state_of_charge)
   
-def bms_movingaverage_soc(temperature_range,state_of_charge):
+def bms_movingaverage(temperature_range,state_of_charge):
    length = len(state_of_charge)
    if length >= 5:
       bmsmovingaveragesoc = (sum(state_of_charge[-5:])/5)
