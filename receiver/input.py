@@ -15,7 +15,7 @@ class main():
     SOC_list = []
     while True:
         Temperature,SOC=read_sender_inputs()
-        if temperature == None or charge_rate == None:
+        if Temperature == None or SOC == None:
             break
         temperature_list.append(Temperature)
         SOC_list.append(SOC)
