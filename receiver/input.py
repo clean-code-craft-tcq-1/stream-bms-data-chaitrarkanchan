@@ -12,12 +12,11 @@ def read_sender_inputs():
     
  class main():
     temperature_list = []
-    soc_list = []
-    
+    SOC_list = []
     while True:
-        Temperature,soc=read_sender_inputs()
+        Temperature,SOC=read_sender_inputs()
         if temperature == None or charge_rate == None:
             break
         temperature_list.append(Temperature)
-        soc_list.append(SOC)
-        print(temperature_list,soc_list)
+        SOC_list.append(SOC)
+        print(temperature_list,SOC_list)
