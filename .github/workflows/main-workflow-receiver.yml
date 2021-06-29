@@ -36,4 +36,4 @@ jobs:
         run:  mvn -f pom.xml test
         
       - name: Piping Java and Python
-        run : mvn compile exec:java -Dexec.mainClass="sender.BMSSender.java" | python receiver/receiver_test.py
+        run : mvn compile exec:java -Dexec.mainClass="sender.BMSSender.java" | python receiver/input.py
