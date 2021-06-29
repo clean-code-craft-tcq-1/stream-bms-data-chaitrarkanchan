@@ -10,7 +10,7 @@ def read_sender_inputs():
     except EOFError:
         return None,None 
     
- class main():
+class main():
     temperature_list = []
     SOC_list = []
     while True:
