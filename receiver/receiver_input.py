@@ -1,12 +1,10 @@
-import json
+import sys
+import ast
 
-def bms_console_readinput():
-        input_data = input()
-        data_list = json.loads(input_data)
-        return process_values(data_list)             
-        
-def process_values(data_list):
-   Temperature = data_list['Temperature']
-   SOC = data_list['SOC']
-   chargeRate = data_list['chargeRate'] 
-   return Temperature, SOC
+def bms_console_input():
+  data = sys.stdin.readlines()    
+  for i in data:
+    bms_param_data = ast.literal_eval(data)
+    Temperature = bms_param_data['Temperature']
+    Soc = bms_param_data['Soc']
+    return Temperature, Soc
